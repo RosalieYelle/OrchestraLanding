@@ -16,6 +16,7 @@
   flex: 1;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .left-section {
@@ -23,6 +24,7 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .top-left {
@@ -39,6 +41,7 @@
 }
 
 .left-section a:hover {
+  color: black;
   text-decoration: underline;
 }
 
@@ -51,6 +54,7 @@
 
 .website-links {
   flex: 1;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   margin-right: 3rem;
@@ -60,6 +64,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   justify-content: center;
   align-items: center;
 }
@@ -85,17 +90,17 @@
   background-color: #1A120F;
   color: white;
   height: 100%;
-  display: flex;
+  margin-top: -5rem;
   align-items: center;
   justify-content: center;
-  padding: 5rem 10rem 0;
+  display: flex;
+  padding: 5rem 10rem 0 10rem;
 }
 
 .right-section a:hover {
   text-decoration: underline;
 }
 
-/* Responsive layout for smaller screens */
 @media (max-width: 1400px) {
   .footer {
     min-height: 45vh;
@@ -106,25 +111,37 @@
 
   .footer-content {
     flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     gap: 2rem;
   }
 
   .right-section {
-    padding: 5rem 2rem 4em;
+    padding-bottom: 4em;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
   }
 
   .left-section {
+    width: 100%;
     max-width: 600px;
+    margin: 0 auto;
   }
 
   .top-left {
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
 
   .website-links {
     flex-direction: column;
+    align-items: center;
     margin-right: 0;
   }
 
@@ -132,6 +149,11 @@
     width: 100%;
     text-align: center;
     margin-bottom: 1rem;
+  }
+
+  .logos {
+    align-items: center;
+    justify-content: center;
   }
 
   .rights {
