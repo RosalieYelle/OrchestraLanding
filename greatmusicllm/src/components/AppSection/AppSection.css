@@ -1,0 +1,226 @@
+.app-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  box-sizing: border-box;
+  background-color: #C8BDAF;
+}
+
+.app-section h2 {
+  font-size: clamp(1rem, 4vw, 4rem);
+  margin-bottom: 2rem;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  max-width: 100%;
+  color: #1A120F;
+}
+
+.app-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(80px, 40%, 300px);
+  height: 2px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.app-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  max-width: 2000px;
+  position: relative;
+}
+
+.tagline,
+.feature-list {
+  color: #1A120F;
+  font-size: 1.625rem;
+}
+
+.mockup {
+  width: 85%;
+  color: #1A120F;
+  font-size: 1.625rem;
+  position: relative;
+  z-index: 1;
+  margin-right: 5rem;
+}
+
+.mockup img {
+  width: 100%;
+  border: solid 2px #1A120F;
+  position: relative;
+  z-index: 2;
+}
+
+.mockup-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mockup-bg::before,
+.mockup-bg::after {
+  content: "";
+  position: absolute;
+  background-color: #1A120F;
+  aspect-ratio: 3 / 2;
+}
+
+/* Rectangle 1 */
+.mockup-bg::before {
+  width: 60%;
+  height: 80%;
+  top: -10%;
+  left: -5%;
+}
+
+/* Rectangle 2 */
+.mockup-bg::after {
+  width: 60%;
+  height: 80%;
+  top: 30%;
+  left: 45%;
+}
+
+.demo {
+  margin: 1rem 0 2rem;
+}
+
+.demo button {
+  font-size: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background-color: #1A120F;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 5rem;
+}
+
+/* Shared responsive styles */
+@media (max-width: 1024px) {
+  .app-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .feature-list {
+    width: 100%;
+    max-width: 880px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .mockup {
+    width: min(94%, 840px);
+    max-width: 1000px;
+    flex: 0 0 auto;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+  }
+
+  .mockup img {
+    height: auto;
+    max-height: 62vh;
+    object-fit: contain;
+    display: block;
+  }
+
+  @supports (height: 1vh) {
+    .mockup img {
+      max-height: min(62vh, 720px);
+    }
+  }
+
+  .demo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .feature-list li,
+  .tagline {
+    font-size: clamp(0.8rem, 2vw, 2rem);
+  }
+}
+
+/* Phones, foldables, smart displays */
+@media (max-height: 700px), (max-width: 480px) {
+  .app-section h2 {
+    font-size: clamp(0.8rem, 5vw, 2rem);
+    padding: 0 2rem;
+  }
+
+  .demo button {
+    font-size: clamp(0.8rem, 5vw, 2rem);
+  }
+}
+
+/* Tablets only */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app-section h2 {
+    font-size: clamp(0.8rem, 5vw, 4.5rem);
+  }
+
+  .demo button {
+    font-size: clamp(0.8rem, 5vw, 4.5rem);
+  }
+}
+
+/* Landscape phones, foldables, smart displays */
+@media (max-width: 1024px) and (max-height: 600px) {
+  .app-section h2 {
+    font-size: clamp(0.8rem, 5vw, 4rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .demo button {
+    font-size: clamp(0.8rem, 5vw, 4rem);
+  }
+
+  /* Rectangle tweaks */
+  .mockup-bg::before {
+    width: 40%;
+    height: 30%;
+    top: 10%;
+    left: 5%;
+  }
+
+  .mockup-bg::after {
+    width: 40%;
+    height: 30%;
+    top: 50%;
+    left: 55%;
+  }
+}
+
+/* Larger tablets and small desktops */
+@media (max-width: 1280px) and (max-height: 800px) {
+  .app-section h2 {
+    font-size: clamp(0.8rem, 3vw, 4rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .demo button {
+    font-size: clamp(0.8rem, 5vw, 4rem);
+  }
+}

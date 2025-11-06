@@ -1,0 +1,140 @@
+.footer {
+  background-color: white;
+  color: black;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.top-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+}
+
+.left-section a {
+  color: black;
+}
+
+.left-section a:hover {
+  text-decoration: underline;
+}
+
+.left-section ul {
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.website-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-right: 3rem;
+}
+
+.logos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rights {
+  text-align: center;
+}
+
+.logos svg {
+  width: 3vh;
+}
+
+.logos img {
+  width: 20vh;
+}
+
+.col {
+  flex: 1;
+}
+
+.right-section {
+  width: 100%;
+  background-color: #1A120F;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 10rem 0;
+}
+
+.right-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 1400px) {
+  .footer {
+    min-height: 45vh;
+    height: auto;
+    overflow-x: hidden;
+    font-size: clamp(0.8rem, 2vw, 2rem);
+  }
+
+  .footer-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .right-section {
+    padding: 5rem 2rem 4em;
+  }
+
+  .left-section {
+    max-width: 600px;
+  }
+
+  .top-left {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .website-links {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .col {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .rights {
+    padding-top: 1rem;
+  }
+}
