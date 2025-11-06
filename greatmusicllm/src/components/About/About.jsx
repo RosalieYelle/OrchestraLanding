@@ -3,7 +3,7 @@ import about from "../../assets/about.jpg";
 
 export default function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about-content">
         <div className="about-text">
             <h2>About Us</h2>
